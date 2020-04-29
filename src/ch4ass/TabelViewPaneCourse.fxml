@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch4ass.TabelViewPaneCourseController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="399.0" prefWidth="602.0" spacing="15.0" style="-fx-background-color: #E0FFFF;">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="502.0" prefWidth="562.0" spacing="10.0">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="260.0" prefWidth="223.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="217.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="studentId">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="courseId" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="semester" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldStId" prefHeight="27.0" prefWidth="186.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="textFieldCoId" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="textFieldSemester" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableView" prefHeight="256.0" prefWidth="224.0">
+                    <columns>
+                      <TableColumn fx:id="tcStId" prefWidth="75.0" text="studentId" />
+                      <TableColumn fx:id="tcCoId" prefWidth="75.0" text="courseId" />
+                        <TableColumn fx:id="tcSemester" prefWidth="75.0" text="semester" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="202.0" prefWidth="575.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <children>
+                  <Button fx:id="buttonShow" mnemonicParsing="false" onAction="#buttonShowHandle" prefHeight="28.0" prefWidth="105.0" style="-fx-background-color: #00CED1;" text="Show" textFill="#ffe9e9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#buttonAddHandle" prefHeight="28.0" prefWidth="105.0" style="-fx-background-color: #00CED1;" text="Add" textFill="#ffe9e9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
